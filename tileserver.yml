@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: map-tile-server
+  labels:
+    app: map-tile-server
+spec:
+  containers:
+    - name: selfhosted-tileserver
+      image: maptiler/tileserver-gl
+      ports:
+        - containerPort: 8080
+          name: http
